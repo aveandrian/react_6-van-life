@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import AboutBg from '../assets/about-img.svg?component'
 
 export default function About(){
@@ -18,7 +19,7 @@ export default function About(){
             Your destination is waiting.<br/>
             Your van is ready.
           </h2>
-          <button className='about-page--section-btn'>Explore our vans</button>
+          <Link to='/vans' className='about-page--section-btn'>Explore our vans</Link>
         </div>
       </main>
     )

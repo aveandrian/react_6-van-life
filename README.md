@@ -1,9 +1,9 @@
 # VanLife
 
-**Book a van for your next great adventure**    
+**An awesome app for renting decked-out travel vans for your next road trip adventure! 🚐**    
 
 
-Stack: React, ReactRouter, Vite  
+Stack: React, ReactRouter, Vite, Miragejs 
  
 ## Setup   
  ```npm install```  
