@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function VanComponent(props){
     return (
-        <Link to={`/vans/${props.id}`} className="van">
+        <Link to={`${props.id}`} state={{search: props.searchParams.toString(), type: props.searchParams.get("type")}} className="van">
             <img src={props.imageUrl} className="van--image"/>
             <div className="van--description-section">
                 <div>

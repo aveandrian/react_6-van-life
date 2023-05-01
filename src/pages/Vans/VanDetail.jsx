@@ -1,30 +1,39 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom"
+import { Link, useLocation, useLoaderData, defer, Await } from "react-router-dom"
+import { getVans } from "../../api";
+import { Suspense } from "react";
+
+export function loader({params}){
+    return defer({vanDetailPromise: getVans(params.id)})
+}
 
 export default function VanDetail(){
-    const params = useParams();
-    const [vanDetail, setVanDetail] = useState(null)
-    console.log(vanDetail)
+    const location = useLocation()
+    const vanDetail = useLoaderData()
+   
+    const search = location.state?.search !== "" ? `..?${location.state.search}` : ".."
+    const backText = location.state?.type ? location.state.type : "all"
 
-    useEffect(()=>{
-        fetch(`/api/vans/${params.id}`)
-        .then(res=>res.json())
-        .then(data => setVanDetail(data.vans))
-    }, [params])
+    function getVansDetailsElemetns(vanDetail){ 
+        return( 
+            <>
+            <img src={vanDetail.imageUrl} className="van--detail--image"/>
+            <div className={`van--type ${vanDetail.type}`}>{vanDetail.type ? vanDetail.type.charAt(0).toUpperCase() + vanDetail.type.slice(1) : ""}</div>   
+            <h1 className="van--name">{vanDetail.name}</h1>
+            <div><span className="van--price">${vanDetail.price}</span><span>/day</span></div>
+            <p className="van--detail--text">{vanDetail.description}</p>   
+            <Link to="/" className='btn'>Rent this van</Link>
+            </>
+        )
+    }
 
     return (
         <main className="van--detail">
-            {vanDetail ? (
-                <>
-                    <Link to=".." relative="path" className="van--detail-back" >&larr; <span className="back--link">Back to the vans</span></Link>
-                    <img src={vanDetail.imageUrl} className="van--detail--image"/>
-                    <div className={`van--type ${vanDetail.type}`}>{vanDetail.type ? vanDetail.type.charAt(0).toUpperCase() + vanDetail.type.slice(1) : ""}</div>   
-                    <h1 className="van--name">{vanDetail.name}</h1>
-                    <div><span className="van--price">${vanDetail.price}</span><span>/day</span></div>
-                    <p className="van--detail--text">{vanDetail.description}</p>   
-                    <Link to="/" className='btn'>Rent this van</Link>
-                </>
-            ) : <h2>Loading...</h2>}
+            <Link to={search} relative="path" className="van--detail-back" >&larr; <span className="back--link">Back to {backText} vans</span></Link>
+            <Suspense fallback={<h2>Loading van's details...</h2>}>
+                <Await resolve={vanDetail.vanDetailPromise}>
+                   {getVansDetailsElemetns}
+                </Await>
+            </Suspense>
         </main>
     )
 }
