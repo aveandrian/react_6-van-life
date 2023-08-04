@@ -15,7 +15,16 @@ body {
   min-height: 100vh;
   -ms-overflow-style: none;
   scrollbar-width: none;
- 
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 100%;
 }
 
 .header {
@@ -35,6 +44,7 @@ body {
 }
 nav {
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 
@@ -53,7 +63,7 @@ nav > a:hover {
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
-  background-size: cover; 
+  background-size: 100% auto; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,6 +224,10 @@ footer {
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   border: none;
+}
+
+.vans-filers--type:hover {
+  cursor: pointer;
 }
 
 .clear-filters-btn {
