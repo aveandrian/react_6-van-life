@@ -46,8 +46,21 @@
 }
 
 .host-van-details > p {
-  margin-bottom:20px
+  margin-bottom:20px;
 }
+
+.host-van-details--type {
+  display: flex;
+  gap: 0.3em;
+   margin-bottom:20px;
+}
+
+.host-van-details--type p::first-letter {
+  text-transform: uppercase;
+}
+
+
+
 
 .host-van-photos {
   display: grid;

@@ -5,7 +5,7 @@ export default function HostVansDetails(){
     return (
         <div className="host-van-details">
             <p><span style={{fontWeight: "bold"}}>Name: </span>{vanDetail.name}</p>
-            <p><span style={{fontWeight: "bold"}}>Category: </span>{vanDetail.type}</p>
+            <div className="host-van-details--type"><span style={{fontWeight: "bold"}}>Category: </span> <p>{vanDetail.type}</p></div>
             <p><span style={{fontWeight: "bold"}}>Description: </span>{vanDetail.description}</p>
             <p><span style={{fontWeight: "bold"}}>Visibility: </span>Public</p>
         </div>
