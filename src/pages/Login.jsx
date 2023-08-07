@@ -1,5 +1,6 @@
 import { useLoaderData, Form, redirect, useActionData, useNavigation } from "react-router-dom"
 import { loginUser } from "../api"
+import '../styles/LoginPage.css'
 
 export function loader({ request }) {
     return new URL(request.url).searchParams.get("message")
@@ -27,7 +28,7 @@ export default function Login(){
     const errorMessage = useActionData()
 
     return (
-        <div className="login-container" >
+        <main className="login-container" >
             <h1>Sign in to your account</h1>
             {message && <h3 style={{color: "red"}}>{message}</h3>}
             {errorMessage && <h4 style={{color: "red"}}>{errorMessage}</h4>}
@@ -42,6 +43,6 @@ export default function Login(){
                  name="password"/>
                  <button className="login-btn" disabled={status.state === "submitting"}>{status.state === "submitting" ? "Logging in..." : "Log In"}</button>
             </Form>
-        </div>
+        </main>
     )
 }

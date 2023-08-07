@@ -3,6 +3,7 @@ import {  useLoaderData, useSearchParams, defer } from "react-router-dom"
 import { getVans } from "../../api"
 import { Await } from "react-router-dom"
 import { Suspense } from "react"
+import '../../styles/VansPage.css'
 
 export function loader(){
     return defer({vans: getVans()})

@@ -1,0 +1,138 @@
+
+.host-income {
+  padding-inline: 26px;
+  color: #161616;
+}
+
+.host-income--title {
+  margin-block: 3vh;
+}
+
+.host-income--filter {
+  color: #4d4d4d;
+  margin-bottom: 2vh;
+}
+
+.host-income--filter span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income--value {
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+.host-income--graph {
+  margin-block: 2vh;
+  position: relative;
+  max-width: 500px;
+}
+
+.host-income-graph-amounts {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.graph-amount-item {
+  margin-top: 4vh;
+  display: grid;
+  grid-template-columns: 10% auto;
+  align-items: baseline;
+}
+
+.graph-amount-title {
+  width: fit-content;
+}
+
+.graph-amount-row {
+  height: 2px;
+  width: 100%;
+  background: url('../assets/line.svg') no-repeat;
+  background-size: 100% auto;
+}
+
+
+.host-income-graph-values {
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+  width: 450px;
+  height: 85%;
+  display: flex;
+  align-items: end;
+  gap: 5%;
+}
+
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+  position: relative;
+  
+}
+
+.column-month {
+  position: absolute;
+  bottom: -2rem;
+}
+
+.graph-column {
+  width: 3.5rem;
+  border-radius: 5px;
+  background: #FFEAD0;
+}
+
+.graph-column.highlight {
+  background: #FF8C38;
+}
+
+.info-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+  width: 700px;
+}
+
+.info-header--filter {
+  color: #4d4d4d;
+}
+
+.info-header--filter span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.info-header--title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 60px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 31px;
+  padding: 35px 29px;
+  border-radius: 6px;
+  width: 700px;
+}
+
+.transaction-amount {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.transaction-date {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4d4d4d;
+}

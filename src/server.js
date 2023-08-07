@@ -29,7 +29,7 @@ createServer({
         server.create("van", { id: "6", name: "Green Wonder", price: 70, 
         description: "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.", 
         imageUrl: "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png", type: "rugged", hostId: "123" })
-        server.create("user", { id: "123", email: "a@a.com", password: "p123", name: "Andrei" })
+        server.create("user", { id: "123", email: "test@test.com", password: "p123", name: "Andrei" })
     },
 
     routes() {

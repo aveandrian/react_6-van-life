@@ -1,6 +1,7 @@
 import { Link, useLocation, useLoaderData, defer, Await } from "react-router-dom"
 import { getVans } from "../../api";
 import { Suspense } from "react";
+import '../../styles/VanDetail.css'
 
 export function loader({params}){
     return defer({vanDetailPromise: getVans(params.id)})
@@ -16,12 +17,17 @@ export default function VanDetail(){
     function getVansDetailsElemetns(vanDetail){ 
         return( 
             <>
-            <img src={vanDetail.imageUrl} className="van--detail--image"/>
-            <div className={`van--type ${vanDetail.type}`}>{vanDetail.type ? vanDetail.type.charAt(0).toUpperCase() + vanDetail.type.slice(1) : ""}</div>   
-            <h1 className="van--name">{vanDetail.name}</h1>
-            <div><span className="van--price">${vanDetail.price}</span><span>/day</span></div>
-            <p className="van--detail--text">{vanDetail.description}</p>   
-            <Link to="/" className='btn'>Rent this van</Link>
+                <div className="van--detail--content">
+                    <img src={vanDetail.imageUrl} className="van--detail--image"/>
+                    <div className="van-detail--description">
+
+                        <div className={`van--type ${vanDetail.type}`}>{vanDetail.type ? vanDetail.type.charAt(0).toUpperCase() + vanDetail.type.slice(1) : ""}</div>   
+                        <h1 className="van--name">{vanDetail.name}</h1>
+                        <div><span className="van--price">${vanDetail.price}</span><span>/day</span></div>
+                        <p className="van--detail--text">{vanDetail.description}</p>   
+                        <Link to="/" className='btn'>Rent this van</Link>
+                    </div>
+                </div>
             </>
         )
     }

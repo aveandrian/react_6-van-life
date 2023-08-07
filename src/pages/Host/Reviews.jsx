@@ -1,13 +1,12 @@
 import { nanoid } from 'nanoid';
+import '../../styles/HostVanReviews.css'
 
 export function Stars(props){
     const starsArray = []
     for(let i=0;i<props.rating;i++){
         starsArray.push(<p>⭐</p>)
     }
-    return starsArray.map(() => <p key={nanoid()}>⭐</p>)
-
-     
+    return starsArray.map(() => <p key={nanoid()}>⭐</p>)   
 }
 
 export default function Reviews(){
@@ -54,11 +53,11 @@ export default function Reviews(){
                     <h1>5.0</h1><p>⭐ overall rating</p>
                 </div>
                 <div className="rating-overview">
-                    <div className="rating-row"><p> 5 stars</p><div className="rating-line rating-5"></div><p>100%</p></div>
-                    <div className="rating-row"><p>4 stars</p><div className="rating-line"></div><p>0%</p></div>
-                    <div className="rating-row"><p>3 stars</p><div className="rating-line"></div><p>0%</p></div>
-                    <div className="rating-row"><p>2 stars</p><div className="rating-line"></div><p>0%</p></div>
-                    <div className="rating-row"><p>1 star</p><div className="rating-line"></div><p>0%</p></div>
+                    <div className="rating-row"><p className='rating-text'>5 stars</p><div className="rating-line rating-5"></div><p>100%</p></div>
+                    <div className="rating-row"><p className='rating-text'>4 stars</p><div className="rating-line"></div><p>0%</p></div>
+                    <div className="rating-row"><p className='rating-text'>3 stars</p><div className="rating-line"></div><p>0%</p></div>
+                    <div className="rating-row"><p className='rating-text'>2 stars</p><div className="rating-line"></div><p>0%</p></div>
+                    <div className="rating-row"><p className='rating-text'>1 star</p><div className="rating-line"></div><p>0%</p></div>
                 </div>
             </div>
             <h2>Reviews ({reviewsData.length})</h2>

@@ -26,13 +26,15 @@ export default function HostVans(){
     }
 
     return (
-        <div className="host-van-list">
+        <div className="dashboard-vans-container">
             <h1 className="host-van-list--title">Your listed vans</h1>
-            <Suspense fallback={<h2>Loading your vans...</h2>}>
-                <Await resolve={vansData.hostVans}>
-                    {getHostVansData}
-                </Await>
-            </Suspense>
+            <div className="host-van-list">
+                <Suspense fallback={<h2>Loading your vans...</h2>}>
+                    <Await resolve={vansData.hostVans}>
+                        {getHostVansData}
+                    </Await>
+                </Suspense>
+            </div>
         </div>
     )
 }

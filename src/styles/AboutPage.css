@@ -1,0 +1,81 @@
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    color: #161616;
+    background: #FFF7ED;
+  }
+  
+  .about-page--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    max-width: 500px;
+    margin-bottom: 1vh;
+  }
+  
+  .about-page--title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  
+  .about-page--description {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .about-page--section {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 450px;
+    background: #FFCC8D;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .about-page--section-btn {
+    width: 174px;
+    height: 49px;
+    background: #161616;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .about-page--section-btn:hover {
+    transform: translate(1px, 1px)
+  }
+  
+  @media screen and (max-width: 950px) {
+    .about-page {
+        padding-inline: 30px;
+    }
+
+    .about-page--title {
+        font-size: 1.8rem;
+    }
+
+    .about-page--description {
+        font-size: 0.8rem;
+    }
+
+    .about-page--section {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+  }

@@ -3,6 +3,7 @@ import { getHostVans } from "../../api"
 import { Link } from "react-router-dom"
 import { requireAuth } from "../../utils"
 import { Suspense } from "react"
+import '../../styles/HostDashboard.css'
 
 export async function loader({request}){
     await requireAuth(request)
@@ -11,6 +12,7 @@ export async function loader({request}){
 
 export default function Dashboard(){
     const vansData = useLoaderData()
+    
     function getHostVansData(vansData){
         return vansData.map(van => (
             <Link to={`vans/${van.id}`} className="host-van-container" key={van.id}>

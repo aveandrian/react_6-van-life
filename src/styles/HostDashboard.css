@@ -1,0 +1,124 @@
+.dashboard-income-container {
+  padding-inline: 10vw;
+  padding-block: 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  background-color: #FFEAD0;
+}
+
+.dashboard-income-welcome-msg {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.dashboard-income-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: #4D4D4D;
+  text-decoration: none;
+}
+
+.dashboard-income-links > a, .dashboard-reviews-container > a, .dashboard-vans-container-header > a {
+  color: #161616;
+  text-decoration: none;
+}
+
+.dashboard-income-links > a:hover,  .dashboard-reviews-container > a:hover, .dashboard-vans-container-header > a:hover {
+  text-decoration: underline;
+}
+
+.dashboard-income-sum { 
+  font-weight: 800;
+  font-size: 48px;
+  margin: 0px;
+}
+
+.dashboard-reviews-container {
+  padding-inline: 10vw;
+  padding-block: 3vh;
+  background: #FFDDB3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-vans-container {
+  padding-inline: 10vw;
+  padding-block: 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.dashboard-vans-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-vans-container-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+  
+  
+.host-nav {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.host-nav > a {
+  font-weight: 500;
+  color: #4D4D4D;
+}
+
+.host-nav > a:hover {
+  color: #161616;
+  font-weight: 700;
+}
+
+.host-van-list {
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(30%, 1fr));
+    justify-items: center;
+    gap: 2.5rem;
+}
+
+.host-van-container {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  text-decoration: none;
+  color: #161616;
+  gap: 15px;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.host-van-image {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.host-van-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.host-van-price {
+  font-weight: 500;
+  font-size: 16px;
+  color: #4D4D4D;
+}
+
+.host-van {
+  padding-inline: 20px;
+  margin-top: 40px;
+}

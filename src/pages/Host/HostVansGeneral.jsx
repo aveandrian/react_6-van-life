@@ -2,6 +2,7 @@ import { Await, Link, NavLink, Outlet, useLoaderData, defer } from "react-router
 import { getHostVans } from "../../api";
 import { requireAuth } from "../../utils";
 import { Suspense } from "react";
+import '../../styles/HostVanDetails.css'
 
 export async function loader({params, request}){
     await requireAuth(request)
@@ -26,19 +27,21 @@ export default function HostVansGeneral(){
                         <span>${vanDetail.price}</span><span>/day</span>
                     </div>
                 </div>
-                <nav className="host-van-general-links">
-                    <NavLink end to="." style={({isActive}) => isActive? activeStyles : null}>Details</NavLink>
-                    <NavLink to="pricing" style={({isActive}) => isActive? activeStyles : null}>Pricing</NavLink>
-                    <NavLink to="photos" style={({isActive}) => isActive? activeStyles : null}>Photos</NavLink>
-                </nav>
-                <Outlet context={{vanDetail}} />
+                <div className="host-van-general-content">
+                    <nav className="host-van-general-links">
+                        <NavLink end to="." style={({isActive}) => isActive? activeStyles : null}>Details</NavLink>
+                        <NavLink to="pricing" style={({isActive}) => isActive? activeStyles : null}>Pricing</NavLink>
+                        <NavLink to="photos" style={({isActive}) => isActive? activeStyles : null}>Photos</NavLink>
+                    </nav>
+                    <Outlet context={{vanDetail}} />
+                </div>
             </div>
         )
     }
 
     return (
         <div className="host-van">
-            <Link to=".." relative="path" className="van--detail-back" >&larr; <span className="back--link">Back to the vans</span></Link>
+            <Link to="../vans" className="van--detail-back" >&larr; <span className="back--link">Back to the vans</span></Link>
             <Suspense fallback={<h2>Loading van's details...</h2>}>
                 <Await resolve={vanDetail.vanDetailPromise}>
                     {getVanDetailElements}

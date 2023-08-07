@@ -1,0 +1,71 @@
+
+
+.van--detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 23px;
+  margin-bottom: 20px
+}
+
+.van--detail--content {
+  display: flex;
+  align-items: center;
+  gap: 5vw
+}
+
+.van-detail--description .van--type {
+    width: fit-content;
+}
+
+.van--detail--image {
+  width: 50%;
+}
+
+.van-detail--description {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh
+}
+
+.van-detail--description  .van--detail--text {
+    margin-block: 5vh;
+    width: 60%;
+}
+
+.van-detail--description .btn {
+    width: 60%;
+}
+  
+.van--detail-back {
+  grid-column: 1 / span 2;
+  text-decoration: none;
+  color: #161616;
+  margin-bottom: 20px;
+  max-width: fit-content;
+}
+
+@media screen and (max-width: 950px) {
+    .van--detail--content {
+        flex-direction: column;
+    }
+
+    .van--detail--image {
+        width: 100%;
+    }
+
+    .van-detail--description .van--name, .van-detail--description .van--price {
+        font-size: 7vw;
+    }
+
+    .van-detail--description  .van--detail--text {
+        width: 100%;
+        font-size: 3.8vw;
+    }
+
+    
+    
+    .van-detail--description .btn {
+        width: 100%;
+    }
+}

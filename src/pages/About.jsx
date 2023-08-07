@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import AboutBg from '../assets/about-img.svg?component'
+import '../styles/AboutPage.css'
 
 export default function About(){
     return (

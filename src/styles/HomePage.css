@@ -1,0 +1,42 @@
+
+.home-page { 
+  flex: 1;
+  background: url('../assets/home-bg.svg') no-repeat 0 0 fixed;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  background-size: cover; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  color: white;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.home-page--title {
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.home-page--description {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 2vh  
+}
+  
+@media screen and (max-width: 950px){
+    .home-page {
+        padding-inline: 30px;
+        text-align: center;
+    }
+}
