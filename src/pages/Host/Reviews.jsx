@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import '../../styles/HostVanReviews.css'
+import '../../styles/HostReviews.css'
 
 export function Stars(props){
     const starsArray = []

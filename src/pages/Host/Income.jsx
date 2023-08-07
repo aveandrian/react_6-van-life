@@ -3,15 +3,15 @@ import '../../styles/HostIncome.css'
 export default function Income() {
     const options = { month: "long" };
     const today = new Date();
-    console.log("today", today)
     const currentMonth = new Date().getMonth()
     const currentDay = new Date().getDate()
-    const lastThirtyDays = new Intl.DateTimeFormat("en-US", options).format(new Date().setDate(currentDay - 30))
-    
+    const thirtyDaysAgoMonth = new Intl.DateTimeFormat("en-US", options).format(new Date().setDate(currentDay - 30))
     const currentMonthName = new Intl.DateTimeFormat("en-US", options).format(today)
-    
-    console.log(lastThirtyDays)
-    console.log(currentMonthName)
+
+    const optionsForData = { month: 'short', year: '2-digit', day: 'numeric' };
+    const dateTimeFormat2 = new Intl.DateTimeFormat('en-US', optionsForData)
+
+
 
     const amountData = [ "5k", "4k", "3k", "2k", "1k", "0"]
     const incomeData = [
@@ -41,9 +41,9 @@ export default function Income() {
         }
     ]
     const transactionsData = [
-        { amount: 720, date: "Jan 3, '23", id: "1" },
-        { amount: 560, date: "Dec 12, '22", id: "2" },
-        { amount: 980, date: "Dec 3, '22", id: "3" },
+        { amount: 720, date: dateTimeFormat2.format(new Date(new Date().setDate(currentDay-7))), id: "1" },
+        { amount: 560, date: dateTimeFormat2.format(new Date(new Date().setDate(currentDay-15))), id: "2" },
+        { amount: 980, date: dateTimeFormat2.format(new Date(new Date().setDate(currentDay-20))), id: "3" },
     ]
     
     return (
@@ -63,10 +63,10 @@ export default function Income() {
                     )}
                 </div>
                 <div className='host-income-graph-values'>
-                    {incomeData.map(incomeMonth => (
-                        <div className='column'>
+                    {incomeData.map((incomeMonth, i) => (
+                        <div key={i} className='column'>
                             <div 
-                                className={`graph-column ${incomeMonth.month == currentMonthName || incomeMonth.month == lastThirtyDays ? "highlight" : ""}`}
+                                className={`graph-column ${incomeMonth.month == currentMonthName || incomeMonth.month == thirtyDaysAgoMonth ? "highlight" : ""}`}
                                 style={{height: `${incomeMonth.amount/5000*100}%`}}
                             >
                             </div>

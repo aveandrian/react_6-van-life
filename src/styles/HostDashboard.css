@@ -122,3 +122,19 @@
   padding-inline: 20px;
   margin-top: 40px;
 }
+
+@media screen and (max-width: 950px) {
+    .host-van-list {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .host-van-list .host-van-container {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .host-van-image {
+        width: 30%;
+    }
+}

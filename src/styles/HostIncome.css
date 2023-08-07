@@ -136,3 +136,36 @@
   font-size: 20px;
   color: #4d4d4d;
 }
+
+
+@media screen and (max-width: 950px) {
+  .host-income--graph, .host-income-graph-amounts {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .graph-amount-item {
+    column-gap: 5vw;
+  }
+
+  .host-income-graph-values {
+    width: 100%;
+  }
+
+  .host-income-graph-values {
+    justify-content: end;
+  }
+
+  .graph-column  {
+    width: 8vw;
+  }
+
+  .info-header--title {
+    font-size: 1.2rem;
+  }
+
+  .transaction, .info-header {
+    width: 100%;
+  }
+}
