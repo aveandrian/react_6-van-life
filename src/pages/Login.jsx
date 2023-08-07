@@ -1,4 +1,4 @@
-import { useLoaderData, Form, redirect, useActionData, useNavigation } from "react-router-dom"
+import { useLoaderData, Form, useActionData, useNavigation, Navigate } from "react-router-dom"
 import { loginUser } from "../api"
 import '../styles/LoginPage.css'
 
@@ -15,8 +15,8 @@ export async function action({ request }) {
     try {
         const data = await loginUser({ email, password })
         localStorage.setItem("loggedin", true)
-        
-        return redirect(pathname)
+
+        return <Navigate to={pathname} />
     } catch(err) {
         return err.message
     }
@@ -26,7 +26,7 @@ export default function Login(){
     const status = useNavigation()
     const message = useLoaderData()
     const errorMessage = useActionData()
-
+    
     return (
         <main className="login-container" >
             <h1>Sign in to your account</h1>

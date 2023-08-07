@@ -60,3 +60,18 @@
   width: 100%;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 950px) {
+  .host-van-general-container {
+    flex-direction: column;
+  }
+
+  .host-van-general {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .host-van-general-content {
+    margin: 0;
+  }
+}
