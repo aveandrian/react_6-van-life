@@ -1,6 +1,7 @@
 import { useLoaderData, Form, useActionData, useNavigation, Navigate } from "react-router-dom"
 import { loginUser } from "../api"
 import '../styles/LoginPage.css'
+import { useEffect } from "react"
 
 export function loader({ request }) {
     return new URL(request.url).searchParams.get("message")
@@ -26,7 +27,11 @@ export default function Login(){
     const status = useNavigation()
     const message = useLoaderData()
     const errorMessage = useActionData()
-    
+
+    useEffect(()=>{
+        localStorage.removeItem("loggedin")
+    }, [])
+
     return (
         <main className="login-container" >
             <h1>Sign in to your account</h1>
@@ -43,6 +48,7 @@ export default function Login(){
                  name="password"/>
                  <button className="login-btn" disabled={status.state === "submitting"}>{status.state === "submitting" ? "Logging in..." : "Log In"}</button>
             </Form>
+            <p className="help">* Valid credentials: test@test.com:p123</p>
         </main>
     )
 }
