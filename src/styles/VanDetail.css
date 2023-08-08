@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-inline: 23px;
-  margin-bottom: 20px
+  padding-inline: 1.4375rem;
+  margin-bottom: 1.25rem
 }
 
 .van--detail--content {
@@ -41,11 +41,11 @@
   grid-column: 1 / span 2;
   text-decoration: none;
   color: #161616;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   max-width: fit-content;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 59.375rem) {
     .van--detail--content {
         flex-direction: column;
     }

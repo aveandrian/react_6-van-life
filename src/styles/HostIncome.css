@@ -1,6 +1,6 @@
 
 .host-income {
-  padding-inline: 26px;
+  padding-inline: 1.625rem;
   color: #161616;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .host-income--value {
-  font-size: 38px;
+  font-size: 2.375rem;
   color: #161616;
   font-weight: 900;
 }
@@ -27,7 +27,7 @@
 .host-income--graph {
   margin-block: 2vh;
   position: relative;
-  max-width: 500px;
+  max-width: 31.25rem;
 }
 
 .host-income-graph-amounts {
@@ -47,7 +47,7 @@
 }
 
 .graph-amount-row {
-  height: 2px;
+  height: 0.125rem;
   width: 100%;
   background: url('../assets/line.svg') no-repeat;
   background-size: 100% auto;
@@ -58,7 +58,7 @@
   position: absolute;
   bottom: 1%;
   right: 0;
-  width: 450px;
+  width: 28.125rem;
   height: 85%;
   display: flex;
   align-items: end;
@@ -83,7 +83,7 @@
 
 .graph-column {
   width: 3.5rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background: #FFEAD0;
 }
 
@@ -96,7 +96,7 @@
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 3vh;
-  width: 700px;
+  width: 43.75rem;
 }
 
 .info-header--filter {
@@ -110,8 +110,8 @@
 
 .info-header--title {
   font-weight: 700;
-  font-size: 24px;
-  margin-top: 60px;
+  font-size: 1.5rem;
+  margin-top: 3.75rem;
 }
 
 .transaction {
@@ -119,26 +119,26 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  margin-bottom: 31px;
-  padding: 35px 29px;
-  border-radius: 6px;
-  width: 700px;
+  margin-bottom: 1.9375rem;
+  padding: 2.1875rem 1.8125rem;
+  border-radius: 0.375rem;
+  width: 43.75rem;
 }
 
 .transaction-amount {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 600;
   margin: 0;
 }
 
 .transaction-date {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #4d4d4d;
 }
 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 59.375rem) {
   .host-income--graph, .host-income-graph-amounts {
     width: 100%;
     max-width: 100%;

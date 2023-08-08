@@ -1,23 +1,23 @@
 
 
 .vans-page {
-  padding-inline: 23px;
-  margin-bottom: 20px
+  padding-inline: 1.4375rem;
+  margin-bottom: 1.25rem
 }
 
 .vans-page--header {
-  max-width: 480px;
+  max-width: 30rem;
 }
 
 .vans-page--title { 
   font-weight: 700;
-  font-size: 32px;
-  margin-top: 0px;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 1.875rem;
 }
 
 .van--description-section {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -28,14 +28,14 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .vans-filers--type {
-  width: 104px;
-  height: 37px;
+  width: 6.5rem;
+  height: 2.3125rem;
   background: #FFEAD0;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   color:#4D4D4D;
   display: flex;
   justify-content: center;
@@ -70,7 +70,7 @@
   grid-template-columns:  repeat(auto-fill, minmax(30%, 1fr));
   justify-items: center;
   gap: 2.5rem;
-  margin-top: 57px;
+  margin-top: 3.5625rem;
 }
 
 .van {
@@ -80,25 +80,25 @@
 }
 
 .van--image {
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   width: 100%;
 }
 
 .van--name {
   font-weight: 600;
-  font-size: 20px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-top: 0rem;
+  margin-bottom: 0.625rem;
 }
 
 .van--type {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   color: #FFEAD0;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .simple, .filter-simple:hover, .filter-simple.selected {
@@ -115,24 +115,24 @@
 }
 
 .van--price, .van--price-day {
-  margin: 0px;
-  padding: 0px;
+  margin: 0rem;
+  padding: 0rem;
   color: #161616;
 }
 
 .van--price {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .van--price-day {
   font-family: 'Prompt', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: right;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 59.375rem) {
     .vans-list {
         grid-template-columns: 1fr 1fr;
         gap: 5vw;
