@@ -6,7 +6,7 @@
 Stack: React, ReactRouter, Vite, Miragejs 
 
 ## Live demo:  
-https://jolly-malabi-fa6415.netlify.app/
+https://react-vanlife.netlify.app/
  
 ## Setup   
  ```npm install```  
