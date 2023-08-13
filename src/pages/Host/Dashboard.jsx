@@ -37,7 +37,7 @@ export default function Dashboard(){
                 <h1 className="dashboard-income-sum">$2,260</h1>
             </div>
             <div className="dashboard-reviews-container">
-                <h3>Review score  ⭐5.0/5</h3>
+                <h3>Review score  ⭐5.0/5.0</h3>
                 <Link to="reviews" >Details</Link>
             </div>
             <div className="dashboard-vans-container">
